@@ -13,7 +13,7 @@ def player_setup():
         player_2_colour = "red"
     else:
         player_2_colour = "blue"
-        
+
     return player_1_name, player_2_name, player_1_colour, player_2_colour
 
 
@@ -87,6 +87,8 @@ def format_coordinates(input_string):
     coordinates = [None] * 2
     input_string_upper = input_string.upper()
     if len(input_string_upper) > 2:
+        print("Typo?")
+    elif len(input_string_upper) < 2:
         print("Typo?")
     else:
         if input_string_upper[0] in possible_letters and int(input_string_upper[1]) in range(rows):
