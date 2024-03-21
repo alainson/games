@@ -88,6 +88,8 @@ def format_coordinates(input_string):
     input_string_upper = input_string.upper()
     if len(input_string_upper) > 2:
         print("Typo?")
+    elif len(input_string_upper) < 2:
+        print("Typo?")
     else:
         if input_string_upper[0] in possible_letters and int(input_string_upper[1]) in range(rows):
             coordinates[1] = column_mapping[input_string_upper[0]]
